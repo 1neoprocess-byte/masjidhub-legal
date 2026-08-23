@@ -1,0 +1,34 @@
+name: Mantener Supabase despierto
+
+# El plan gratuito de Supabase pausa el proyecto tras ~7 dias sin actividad.
+# Este ping diario cuenta como actividad y evita que se pause (y que la app
+# deje de funcionar). No escribe nada: solo lee una fila de la vista publica.
+#
+# La clave que aparece abajo es la "publishable/anon key": es PUBLICA por
+# diseno (va dentro de la propia app) y no da acceso a nada, porque las
+# politicas RLS protegen todos los datos. No hay problema en tenerla aqui.
+
+on:
+  schedule:
+    # Todos los dias a las 06:17 UTC. GitHub puede retrasarlo algo; da igual.
+    - cron: '17 6 * * *'
+  # Permite lanzarlo a mano desde la pestana Actions.
+  workflow_dispatch:
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping a la API de MasjidHub
+        run: |
+          URL="https://vuovphmzudjravxbwrrf.supabase.co/rest/v1/mosques_public?select=id&limit=1"
+          KEY="sb_publishable_f4vqBQ12EWtc6Ux-MPyjPQ_tmR9WBqG"
+          CODE=$(curl -s -o /tmp/out -w "%{http_code}" --max-time 30 \
+            "$URL" -H "apikey: $KEY" -H "Authorization: Bearer $KEY")
+          echo "Respuesta HTTP: $CODE"
+          cat /tmp/out
+          if [ "$CODE" != "200" ]; then
+            echo "::error::La API no responde 200. El proyecto puede estar pausado."
+            exit 1
+          fi
+          echo "OK: el proyecto sigue despierto."
