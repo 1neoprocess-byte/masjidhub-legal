@@ -24,6 +24,7 @@
           --muted: #b9b7a3;
           --card: #2f3122;
           --bg: #1c1e14;
+          --olive: #b9c07a;
         }
       }
       * { box-sizing: border-box; }
@@ -36,14 +37,15 @@
         line-height: 1.6;
       }
       header {
-        background: var(--olive);
-        color: var(--cream);
-        padding: 2rem 1.25rem;
+        background: var(--bg);
+        color: var(--olive);
+        padding: 2rem 1.25rem 1.5rem;
         text-align: center;
+        border-bottom: 3px solid var(--gold);
       }
       header .brand { font-size: 1.5rem; font-weight: 800; letter-spacing: 0.04em; }
-      header .brand { color: #e3b53c; }
-      header .brand span { color: #a9c46c; }
+      header .brand { color: var(--gold); }
+      header .brand span { color: var(--olive); }
       main { max-width: 720px; margin: 0 auto; padding: 1.5rem 1.25rem 4rem; }
       h1 { font-size: 1.6rem; margin: 1.5rem 0 0.5rem; }
       h2 { font-size: 1.15rem; margin: 2rem 0 0.5rem; color: var(--olive); }
