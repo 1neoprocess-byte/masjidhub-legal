@@ -1,9 +1,10 @@
 <!doctype html>
-<html lang="es">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>MasjidHub — Aviso legal (Privacidad y Términos)</title>
+<title>MasjidHub — Legal (Privacy Policy &amp; Terms of Use)</title>
+<meta name="description" content="MasjidHub privacy policy and terms of use. No ads, no tracking, no data selling." />
 <style>
   :root {
     --olive: #464b24;
@@ -43,200 +44,430 @@
   }
   header.top h1 { margin: 0 0 4px; font-size: 1.5rem; color: var(--olive); letter-spacing: .3px; }
   header.top p { margin: 0; color: var(--muted); font-size: .95rem; }
-  nav.toc {
-    display: flex; flex-wrap: wrap; gap: 10px;
-    margin: 22px 0 40px;
+  .langswitch { display: flex; gap: 8px; margin-top: 16px; }
+  .langswitch button {
+    font: inherit; font-size: .9rem; font-weight: 600; cursor: pointer;
+    border: 1px solid var(--border); background: var(--card); color: var(--olive);
+    border-radius: 999px; padding: 7px 18px;
   }
+  .langswitch button[aria-pressed="true"] {
+    background: var(--olive); color: var(--bg); border-color: var(--olive);
+  }
+  nav.toc { display: flex; flex-wrap: wrap; gap: 10px; margin: 22px 0 40px; }
   nav.toc a {
-    text-decoration: none;
-    color: var(--olive);
-    border: 1px solid var(--border);
-    background: var(--card);
-    border-radius: 999px;
-    padding: 8px 16px;
-    font-weight: 600;
-    font-size: .95rem;
+    text-decoration: none; color: var(--olive);
+    border: 1px solid var(--border); background: var(--card);
+    border-radius: 999px; padding: 8px 16px; font-weight: 600; font-size: .95rem;
   }
   section.doc { margin-bottom: 64px; }
-  h2 { color: var(--olive); font-size: 1.35rem; margin: 48px 0 6px; }
-  h3 { font-size: 1.08rem; margin: 34px 0 8px; }
-  .updated { color: var(--muted); font-size: .9rem; margin: 0 0 8px; }
-  a { color: var(--gold); }
-  table { width: 100%; border-collapse: collapse; margin: 18px 0; font-size: .95rem; display: block; overflow-x: auto; }
+  h2 { color: var(--olive); font-size: 1.3rem; border-bottom: 1px solid var(--border); padding-bottom: 8px; margin-top: 48px; }
+  h3 { font-size: 1.05rem; margin-top: 32px; margin-bottom: 6px; }
+  .updated { color: var(--muted); font-size: .92rem; margin-top: -4px; }
+  .summary {
+    background: var(--card); border: 1px solid var(--border);
+    border-left: 4px solid var(--gold); border-radius: 10px;
+    padding: 14px 18px; margin: 22px 0;
+  }
+  table { width: 100%; border-collapse: collapse; margin: 18px 0; font-size: .93rem; display: block; overflow-x: auto; }
   th, td { border: 1px solid var(--border); padding: 10px 12px; text-align: left; vertical-align: top; }
   th { background: var(--card); color: var(--olive); }
-  blockquote {
-    margin: 18px 0; padding: 12px 18px;
-    background: var(--card); border-left: 4px solid var(--gold);
-    border-radius: 8px; color: var(--muted);
-  }
   ul { padding-left: 22px; }
   li { margin: 6px 0; }
-  hr { border: none; border-top: 1px solid var(--border); margin: 40px 0; }
-  footer { color: var(--muted); font-size: .85rem; text-align: center; margin-top: 40px; }
+  a { color: var(--gold); }
+  code { background: var(--card); border: 1px solid var(--border); border-radius: 5px; padding: 1px 6px; font-size: .9em; }
+  footer.bot { border-top: 1px solid var(--border); margin-top: 56px; padding-top: 20px; color: var(--muted); font-size: .9rem; }
+  [hidden] { display: none !important; }
 </style>
 </head>
 <body>
 <div class="wrap">
+
   <header class="top">
-    <h1>MasjidHub · Aviso legal</h1>
-    <p>Titular: Neoprocess · Contacto: <a href="mailto:1neoprocess@gmail.com">1neoprocess@gmail.com</a></p>
+    <h1>MasjidHub · Legal</h1>
+    <p>Privacy Policy and Terms of Use · Neoprocess · 1neoprocess@gmail.com</p>
+    <div class="langswitch">
+      <button type="button" data-lang="en" aria-pressed="true">English</button>
+      <button type="button" data-lang="es" aria-pressed="false">Español</button>
+    </div>
   </header>
 
-  <nav class="toc">
-    <a href="#privacidad">Política de Privacidad</a>
-    <a href="#terminos">Términos de Uso</a>
-  </nav>
+  <!-- ══════════════════════════ ENGLISH ══════════════════════════ -->
+  <div data-doc="en">
 
-  <!-- ─────────────── POLÍTICA DE PRIVACIDAD ─────────────── -->
-  <section class="doc" id="privacidad">
-    <h2>Política de Privacidad de MasjidHub</h2>
-    <p class="updated">Última actualización: 8 de julio de 2026</p>
+    <nav class="toc">
+      <a href="#privacy-en">Privacy Policy</a>
+      <a href="#terms-en">Terms of Use</a>
+      <a href="./borrar-cuenta.html">Delete your account</a>
+      <a href="./child-safety.html">Child safety</a>
+    </nav>
 
-    <p>En MasjidHub nos tomamos tu privacidad muy en serio. Esta política explica qué datos tratamos, para qué, con qué base legal y qué derechos tienes, conforme al Reglamento (UE) 2016/679 (<strong>RGPD</strong>) y a la Ley Orgánica 3/2018 (<strong>LOPDGDD</strong>).</p>
-    <p><strong>En resumen:</strong> no vendemos tus datos, no mostramos publicidad y no usamos rastreadores ni analíticas. Solo tratamos lo mínimo para que la app funcione y para revisar las mezquitas que la comunidad aporta.</p>
+    <section class="doc" id="privacy-en">
+      <h2>MasjidHub Privacy Policy</h2>
+      <p class="updated"><strong>Last updated:</strong> 8 July 2026</p>
 
-    <h3>1. Responsable del tratamiento</h3>
-    <ul>
-      <li><strong>Titular:</strong> Neoprocess</li>
-      <li><strong>Correo de contacto (privacidad):</strong> <a href="mailto:1neoprocess@gmail.com">1neoprocess@gmail.com</a></li>
-    </ul>
-    <p>Para cualquier asunto relacionado con tus datos, escríbenos a ese correo.</p>
+      <p>At MasjidHub we take your privacy seriously. This policy explains what data we process, why, on what legal basis, and what rights you have, under Regulation (EU) 2016/679 (<strong>GDPR</strong>) and Spanish Organic Law 3/2018 (<strong>LOPDGDD</strong>).</p>
 
-    <h3>2. Qué datos tratamos, con qué finalidad y base legal</h3>
-    <table>
-      <thead><tr><th>Datos</th><th>Para qué</th><th>Base legal (RGPD)</th></tr></thead>
-      <tbody>
-        <tr><td><strong>Nombre, correo electrónico y foto de perfil</strong> (los facilita tu cuenta de Google al iniciar sesión)</td><td>Crear tu perfil, permitirte aportar contenido y asociar tus aportaciones a tu cuenta</td><td>Ejecución del servicio que solicitas (art. 6.1.b) y tu consentimiento al iniciar sesión (art. 6.1.a)</td></tr>
-        <tr><td><strong>Aportaciones de mezquitas</strong> (nombre, dirección, ciudad, provincia, país, ubicación, instalaciones, horario de yumu'a, teléfono y web si los añades, foto y vídeo, y una nota opcional)</td><td>Publicar el directorio comunitario de mezquitas tras su revisión</td><td>Consentimiento (art. 6.1.a) e interés legítimo en ofrecer un servicio comunitario (art. 6.1.f)</td></tr>
-        <tr><td><strong>Correcciones/reportes</strong> (mezquita, campo, valor sugerido y motivo)</td><td>Mantener la información actualizada y correcta</td><td>Consentimiento e interés legítimo</td></tr>
-        <tr><td><strong>Ubicación aproximada (~2 km)</strong></td><td>Buscar mezquitas cercanas a ti</td><td>Consentimiento; <strong>no se almacena</strong>, solo se usa para la consulta</td></tr>
-        <tr><td><strong>Ubicación exacta</strong></td><td>(a) Calcular en tu dispositivo los horarios de oración y la dirección de la qibla; (b) situar en el mapa una mezquita que tú decides añadir</td><td>Consentimiento. En el caso (a) <strong>no sale de tu dispositivo</strong>; en el (b) la compartes deliberadamente al enviar la mezquita</td></tr>
-      </tbody>
-    </table>
-    <p><strong>No</strong> tratamos categorías especiales de datos. Aunque la app tiene una temática religiosa, <strong>no te pedimos ni registramos tu religión ni creencias</strong>: cualquiera puede usarla.</p>
+      <div class="summary"><strong>In short:</strong> we do not sell your data, we show no advertising, and we use no trackers or analytics. We process only the minimum needed for the app to work and to review the mosques the community contributes.</div>
 
-    <h3>3. Lo que NO hacemos</h3>
-    <ul>
-      <li><strong>No</strong> vendemos ni cedemos tus datos a terceros con fines comerciales.</li>
-      <li><strong>No</strong> mostramos publicidad.</li>
-      <li><strong>No</strong> usamos analíticas, cookies de seguimiento ni rastreadores de terceros.</li>
-      <li><strong>No</strong> registramos tokens de notificaciones: los recordatorios de oración son <strong>locales</strong>, en tu dispositivo.</li>
-      <li>Tus <strong>mezquitas favoritas</strong> se guardan <strong>solo en tu teléfono</strong>, no en nuestros servidores.</li>
-    </ul>
+      <h3>1. Data controller</h3>
+      <ul>
+        <li><strong>Owner:</strong> Neoprocess</li>
+        <li><strong>Contact (privacy):</strong> 1neoprocess@gmail.com</li>
+      </ul>
+      <p>For anything related to your data, write to that address.</p>
 
-    <h3>4. Con quién compartimos datos (encargados del tratamiento)</h3>
-    <p>Para prestar el servicio nos apoyamos en proveedores que actúan como encargados del tratamiento, con las garantías del art. 28 RGPD:</p>
-    <ul>
-      <li><strong>Supabase</strong> — alojamiento de la base de datos y del almacenamiento de fotos/vídeos. Servidores en la <strong>Unión Europea (Irlanda)</strong>.</li>
-      <li><strong>Google</strong> (Google Ireland Ltd. / Google LLC) — inicio de sesión con Google.</li>
-      <li><strong>Expo</strong> — infraestructura para distribuir y actualizar la aplicación.</li>
-    </ul>
-    <p>Algunos proveedores (p. ej. Google, Expo) pueden implicar <strong>transferencias internacionales</strong> fuera del EEE; en tal caso se amparan en las garantías adecuadas previstas por el RGPD (Cláusulas Contractuales Tipo o marcos equivalentes). También podremos comunicar datos a <strong>autoridades</strong> cuando exista una obligación legal.</p>
+      <h3>2. What data we process, why, and on what legal basis</h3>
+      <table>
+        <tr><th>Data</th><th>Purpose</th><th>Legal basis (GDPR)</th></tr>
+        <tr>
+          <td><strong>Name, email address and profile picture</strong> (provided by your Google account when you sign in)</td>
+          <td>Create your profile, let you contribute content, and link your contributions to your account</td>
+          <td>Performance of the service you request (Art. 6(1)(b)) and your consent when signing in (Art. 6(1)(a))</td>
+        </tr>
+        <tr>
+          <td><strong>Mosque submissions</strong> (name, address, city, province, country, location, facilities, jumu'ah time, phone and website if you add them, photo and video, and an optional note)</td>
+          <td>Publish the community mosque directory after review</td>
+          <td>Consent (Art. 6(1)(a)) and legitimate interest in providing a community service (Art. 6(1)(f))</td>
+        </tr>
+        <tr>
+          <td><strong>Corrections / reports</strong> (mosque, field, suggested value and reason)</td>
+          <td>Keep the information accurate and up to date</td>
+          <td>Consent and legitimate interest</td>
+        </tr>
+        <tr>
+          <td><strong>Approximate location (~2 km)</strong></td>
+          <td>Find mosques near you</td>
+          <td>Consent; <strong>it is not stored</strong>, it is only used for the query</td>
+        </tr>
+        <tr>
+          <td><strong>Exact location</strong></td>
+          <td>(a) Calculate prayer times and the qibla direction on your device; (b) place on the map a mosque you choose to add</td>
+          <td>Consent. In case (a) it <strong>never leaves your device</strong>; in case (b) you deliberately share it when submitting the mosque</td>
+        </tr>
+      </table>
+      <p>We do <strong>not</strong> process special categories of data. Although the app has a religious theme, <strong>we neither ask for nor record your religion or beliefs</strong>: anyone may use it.</p>
 
-    <h3>5. Contenido público</h3>
-    <p>Cuando una mezquita que aportas es <strong>aprobada</strong> por nuestra moderación, su información (incluidas foto y vídeo) pasa a ser <strong>visible públicamente</strong> en la app. <strong>Tu nombre y tu correo NO se muestran públicamente</strong>: se usan solo internamente para la revisión y para contactarte si hiciera falta.</p>
+      <h3>3. What we do NOT do</h3>
+      <ul>
+        <li>We do <strong>not</strong> sell or transfer your data to third parties for commercial purposes.</li>
+        <li>We show <strong>no</strong> advertising.</li>
+        <li>We use <strong>no</strong> analytics, tracking cookies or third-party trackers.</li>
+        <li>We do <strong>not</strong> register notification tokens: prayer reminders are <strong>local</strong>, on your device.</li>
+        <li>Your <strong>favourite mosques</strong> are stored <strong>only on your phone</strong>, not on our servers.</li>
+      </ul>
 
-    <h3>6. Plazo de conservación</h3>
-    <ul>
-      <li><strong>Datos de tu cuenta:</strong> mientras tu cuenta esté activa. Si la eliminas (o nos lo pides), se borran; el borrado del usuario elimina en cascada tu perfil.</li>
-      <li><strong>Aportaciones aprobadas:</strong> pueden conservarse como parte del directorio comunitario. A petición tuya, podemos <strong>anonimizar</strong> los datos que te vinculen a ellas (nombre y correo del autor), manteniendo la ficha de la mezquita para la comunidad.</li>
-      <li><strong>Reportes:</strong> se conservan mientras sean útiles para la moderación.</li>
-    </ul>
+      <h3>4. Who we share data with (processors)</h3>
+      <p>To provide the service we rely on providers acting as data processors, with the safeguards of Art. 28 GDPR:</p>
+      <ul>
+        <li><strong>Supabase</strong> — database hosting and storage of photos/videos. Servers in the <strong>European Union (Ireland)</strong>.</li>
+        <li><strong>Google</strong> (Google Ireland Ltd. / Google LLC) — Google sign-in.</li>
+        <li><strong>Expo</strong> — infrastructure to distribute and update the application.</li>
+      </ul>
+      <p>Some providers (e.g. Google, Expo) may involve <strong>international transfers</strong> outside the EEA; where that happens, they rely on the appropriate safeguards provided for by the GDPR (Standard Contractual Clauses or equivalent frameworks).</p>
+      <p>We may also disclose data to <strong>authorities</strong> where there is a legal obligation to do so.</p>
 
-    <h3>7. Tus derechos</h3>
-    <p>Puedes ejercer en cualquier momento tus derechos de <strong>acceso, rectificación, supresión ("derecho al olvido"), oposición, limitación del tratamiento y portabilidad</strong>, así como <strong>retirar tu consentimiento</strong>. Para ello, escríbenos a <a href="mailto:1neoprocess@gmail.com">1neoprocess@gmail.com</a>; podremos pedirte que acredites tu identidad.</p>
-    <p>Si consideras que no hemos atendido correctamente tu solicitud, tienes derecho a <strong>reclamar ante la Agencia Española de Protección de Datos</strong> (AEPD, <a href="https://www.aepd.es" target="_blank" rel="noopener">www.aepd.es</a>).</p>
+      <h3>5. Public content</h3>
+      <p>When a mosque you submit is <strong>approved</strong> by our moderation, its information (including photo and video) becomes <strong>publicly visible</strong> in the app. <strong>Your name and email are NOT shown publicly</strong>: they are used only internally for review and to contact you if necessary.</p>
 
-    <h3>8. Menores</h3>
-    <p>MasjidHub no está dirigida a menores de <strong>14 años</strong>. Al usar la app y aportar contenido, declaras tener al menos esa edad (o contar con el consentimiento de tus tutores conforme a la ley aplicable).</p>
+      <h3>6. Retention period</h3>
+      <ul>
+        <li><strong>Account data:</strong> for as long as your account is active. If you delete it (or ask us to), it is erased; deleting the user cascades to your profile.</li>
+        <li><strong>Approved contributions:</strong> may be retained as part of the community directory. At your request, we can <strong>anonymise</strong> the data linking you to them (author's name and email), keeping the mosque listing for the community.</li>
+        <li><strong>Reports:</strong> retained for as long as they are useful for moderation.</li>
+      </ul>
 
-    <h3>9. Seguridad</h3>
-    <p>Aplicamos medidas técnicas y organizativas para proteger tus datos: cifrado en tránsito (HTTPS/TLS), políticas de seguridad a nivel de fila (RLS) que limitan el acceso a cada usuario a lo que le corresponde, subida de archivos restringida y revisión del contenido antes de su publicación. Ningún sistema es 100 % infalible, pero trabajamos para minimizar los riesgos.</p>
+      <h3>7. Your rights</h3>
+      <p>You may exercise at any time your rights of <strong>access, rectification, erasure ("right to be forgotten"), objection, restriction of processing and portability</strong>, as well as <strong>withdraw your consent</strong>. To do so, write to <strong>1neoprocess@gmail.com</strong>; we may ask you to prove your identity.</p>
+      <p>If you believe we have not handled your request properly, you have the right to <strong>lodge a complaint with the Spanish Data Protection Agency</strong> (AEPD, <a href="https://www.aepd.es">www.aepd.es</a>).</p>
 
-    <h3>10. Cambios en esta política</h3>
-    <p>Podremos actualizar esta Política para reflejar cambios en la app o en la normativa. Publicaremos la versión vigente con su fecha de actualización y, si el cambio es relevante, te avisaremos por medios razonables.</p>
+      <h3>8. Children</h3>
+      <p>MasjidHub is not directed at children under <strong>14</strong>. By using the app and contributing content, you declare that you are at least that age (or have your guardians' consent under applicable law).</p>
 
-    <h3>11. Contacto</h3>
-    <p>Para cualquier duda sobre esta Política o sobre el tratamiento de tus datos: <a href="mailto:1neoprocess@gmail.com">1neoprocess@gmail.com</a>.</p>
-  </section>
+      <h3>9. Security</h3>
+      <p>We apply technical and organisational measures to protect your data: encryption in transit (HTTPS/TLS), row-level security policies (RLS) limiting each user's access to what belongs to them, restricted file uploads, and review of content before publication. No system is 100% infallible, but we work to minimise risks.</p>
 
-  <hr />
+      <h3>10. Changes to this policy</h3>
+      <p>We may update this Policy to reflect changes in the app or in the law. We will publish the current version with its update date and, if the change is significant, we will notify you by reasonable means.</p>
 
-  <!-- ─────────────── TÉRMINOS DE USO ─────────────── -->
-  <section class="doc" id="terminos">
-    <h2>Términos de Uso de MasjidHub</h2>
-    <p class="updated">Última actualización: 8 de julio de 2026</p>
+      <h3>11. Contact</h3>
+      <p>For any question about this Policy or about the processing of your data: <strong>1neoprocess@gmail.com</strong>.</p>
+    </section>
 
-    <p>Bienvenido/a a <strong>MasjidHub</strong>. Al descargar, acceder o usar la aplicación aceptas estos Términos de Uso. Si no estás de acuerdo, por favor no uses la app.</p>
+    <section class="doc" id="terms-en">
+      <h2>MasjidHub Terms of Use</h2>
+      <p class="updated"><strong>Last updated:</strong> 8 July 2026</p>
 
-    <h3>1. Quiénes somos</h3>
-    <p>MasjidHub es una aplicación titularidad de <strong>Neoprocess</strong> ("nosotros"). Contacto: <a href="mailto:1neoprocess@gmail.com">1neoprocess@gmail.com</a>.</p>
+      <p>Welcome to <strong>MasjidHub</strong>. By downloading, accessing or using the application you accept these Terms of Use. If you do not agree, please do not use the app.</p>
 
-    <h3>2. Qué es MasjidHub</h3>
-    <p>MasjidHub es un <strong>directorio comunitario de mezquitas</strong>: permite encontrar mezquitas cercanas y consultar información sobre ellas (instalaciones, horarios, etc.), calcular de forma orientativa los <strong>horarios de oración</strong> y la dirección de la <strong>qibla</strong>, y <strong>aportar</strong> nuevas mezquitas o correcciones. La información la construye la comunidad de personas usuarias.</p>
+      <h3>1. Who we are</h3>
+      <p>MasjidHub is an application owned by <strong>Neoprocess</strong> ("we", "us"). Contact: <strong>1neoprocess@gmail.com</strong>.</p>
 
-    <h3>3. Tu cuenta</h3>
-    <ul>
-      <li>Para aportar contenido necesitas <strong>iniciar sesión con tu cuenta de Google</strong>.</li>
-      <li>Debes tener al menos <strong>14 años</strong> para usar la app y crear contenido.</li>
-      <li>Eres responsable de la actividad realizada desde tu cuenta. Mantén el acceso seguro.</li>
-    </ul>
+      <h3>2. What MasjidHub is</h3>
+      <p>MasjidHub is a <strong>community mosque directory</strong>: it lets you find nearby mosques and see information about them (facilities, times, etc.), calculate indicative <strong>prayer times</strong> and the <strong>qibla</strong> direction, and <strong>contribute</strong> new mosques or corrections. The information is built by the community of users.</p>
 
-    <h3>4. Normas de uso</h3>
-    <p>Al usar MasjidHub te comprometes a <strong>no</strong>:</p>
-    <ul>
-      <li>Añadir mezquitas <strong>falsas, inexistentes o duplicadas</strong>, ni información que sepas incorrecta.</li>
-      <li>Subir fotos o vídeos que no hayas hecho tú o sobre los que no tengas derechos, o que muestren a personas sin su permiso.</li>
-      <li>Publicar contenido ofensivo, ilegal, difamatorio, que incite al odio o que vulnere derechos de terceros.</li>
-      <li>Usar la app para spam, fines comerciales no autorizados, o para dañar, sobrecargar o vulnerar la seguridad del servicio.</li>
-      <li>Suplantar a otras personas o entidades.</li>
-    </ul>
-    <p>Para prevenir mezquitas falsas, los envíos requieren estar <strong>físicamente en el lugar</strong> (ubicación GPS) y adjuntar <strong>foto y vídeo</strong> hechos con la cámara en el momento.</p>
+      <h3>3. Your account</h3>
+      <ul>
+        <li>To contribute content you must <strong>sign in with your Google account</strong>.</li>
+        <li>You must be at least <strong>14 years old</strong> to use the app and create content.</li>
+        <li>You are responsible for activity carried out from your account. Keep your access secure.</li>
+      </ul>
 
-    <h3>5. Tu contenido y la licencia que nos concedes</h3>
-    <p>Sigues siendo el <strong>titular</strong> de las fotos, vídeos, textos y datos que aportas ("tu Contenido"). Ahora bien:</p>
-    <ul>
-      <li><strong>Garantizas</strong> que tienes los derechos necesarios sobre tu Contenido y que su publicación no infringe derechos de terceros ni la ley.</li>
-      <li>Al aportarlo, <strong>nos concedes una licencia mundial, no exclusiva, gratuita, transferible y sublicenciable</strong> para <strong>alojar, usar, reproducir, adaptar, mostrar, publicar y distribuir</strong> tu Contenido en la app y en la comunicación y promoción del servicio. Esta licencia existe para que podamos ofrecer y hacer crecer el directorio comunitario.</li>
-      <li>La licencia continúa respecto del Contenido ya publicado e integrado en el directorio aunque cierres tu cuenta, salvo que solicites su retirada y sea razonable atenderla.</li>
-    </ul>
+      <h3>4. Rules of use</h3>
+      <p>When using MasjidHub you undertake <strong>not</strong> to:</p>
+      <ul>
+        <li>Add <strong>false, non-existent or duplicate</strong> mosques, or information you know to be incorrect.</li>
+        <li>Upload photos or videos you did not take, or over which you hold no rights, or that show people without their permission.</li>
+        <li>Publish offensive, unlawful or defamatory content, content inciting hatred, or content infringing third-party rights.</li>
+        <li>Use the app for spam, unauthorised commercial purposes, or to damage, overload or breach the security of the service.</li>
+        <li>Impersonate other people or entities.</li>
+      </ul>
+      <p>To prevent fake mosques, submissions require you to be <strong>physically at the location</strong> (GPS position) and to attach a <strong>photo and video</strong> taken with the camera at that moment.</p>
 
-    <h3>6. Revisión y moderación</h3>
-    <p>Todo lo que aportas se <strong>revisa antes de publicarse</strong>. Podemos <strong>aprobar, rechazar, editar o eliminar</strong> cualquier contenido, a nuestro criterio y especialmente si incumple estas normas, sin que ello genere derecho a indemnización.</p>
+      <h3>5. Your content and the licence you grant us</h3>
+      <p>You remain the <strong>owner</strong> of the photos, videos, texts and data you contribute ("your Content"). That said:</p>
+      <ul>
+        <li>You <strong>warrant</strong> that you hold the necessary rights over your Content and that publishing it infringes neither third-party rights nor the law.</li>
+        <li>By contributing it, you <strong>grant us a worldwide, non-exclusive, royalty-free, transferable and sublicensable licence</strong> to <strong>host, use, reproduce, adapt, display, publish and distribute</strong> your Content in the app and in the communication and promotion of the service. This licence exists so that we can offer and grow the community directory.</li>
+        <li>The licence continues in respect of Content already published and integrated into the directory even if you close your account, unless you request its removal and it is reasonable to comply.</li>
+      </ul>
 
-    <h3>7. Nuestra propiedad intelectual</h3>
-    <p>La aplicación MasjidHub —incluyendo su <strong>nombre, marca, logotipo, diseño, textos propios y código</strong>— es de nuestra titularidad o de nuestros licenciantes y está protegida por la ley. No puedes copiarla, modificarla, distribuirla ni crear obras derivadas sin nuestro permiso por escrito.</p>
+      <h3>6. Review and moderation</h3>
+      <p>Everything you contribute is <strong>reviewed before publication</strong>. We may <strong>approve, reject, edit or remove</strong> any content at our discretion, and especially if it breaches these rules, without this giving rise to any right to compensation.</p>
 
-    <h3>8. Información orientativa (importante)</h3>
-    <ul>
-      <li>Los <strong>horarios de oración</strong> y la dirección de la <strong>qibla</strong> se <strong>calculan de forma aproximada</strong> a partir de tu ubicación y de métodos de cálculo estándar. Pueden variar respecto a los de tu mezquita o comunidad local. <strong>Verifica siempre con tu mezquita de referencia</strong>; no nos hacemos responsables de decisiones basadas únicamente en estos cálculos.</li>
-      <li>La información de las mezquitas la aporta la comunidad y <strong>puede contener errores, estar desactualizada o incompleta</strong>. Confírmala antes de desplazarte.</li>
-    </ul>
+      <h3>7. Our intellectual property</h3>
+      <p>The MasjidHub application — including its <strong>name, brand, logo, design, own texts and code</strong> — belongs to us or to our licensors and is protected by law. You may not copy, modify, distribute or create derivative works from it without our written permission.</p>
 
-    <h3>9. El servicio "tal cual"</h3>
-    <p>MasjidHub se ofrece <strong>"tal cual" y "según disponibilidad"</strong>, sin garantías de que esté libre de errores o interrupciones. Podemos modificar, suspender o discontinuar funciones en cualquier momento.</p>
+      <h3>8. Indicative information (important)</h3>
+      <ul>
+        <li><strong>Prayer times</strong> and the <strong>qibla</strong> direction are <strong>calculated approximately</strong> from your location and standard calculation methods. They may differ from those of your mosque or local community. <strong>Always check with your reference mosque</strong>; we accept no responsibility for decisions based solely on these calculations.</li>
+        <li>Mosque information is contributed by the community and <strong>may contain errors, be out of date or incomplete</strong>. Confirm it before travelling.</li>
+      </ul>
 
-    <h3>10. Limitación de responsabilidad</h3>
-    <p>En la máxima medida permitida por la ley, no seremos responsables de daños indirectos o derivados del uso o la imposibilidad de uso de la app, de errores en la información comunitaria, ni del contenido aportado por otras personas usuarias. Nada en estos Términos excluye responsabilidades que no puedan excluirse legalmente (p. ej., por dolo).</p>
+      <h3>9. The service "as is"</h3>
+      <p>MasjidHub is provided <strong>"as is" and "as available"</strong>, with no warranty that it will be free of errors or interruptions. We may modify, suspend or discontinue features at any time.</p>
 
-    <h3>11. Donaciones (Sadaqah)</h3>
-    <p>La función de donaciones <strong>aún no está disponible</strong>. Cuando se active, se regirá por condiciones específicas que se mostrarán en ese momento.</p>
+      <h3>10. Limitation of liability</h3>
+      <p>To the fullest extent permitted by law, we shall not be liable for indirect damages or damages arising from the use or inability to use the app, from errors in community information, or from content contributed by other users. Nothing in these Terms excludes liabilities that cannot lawfully be excluded (e.g. wilful misconduct).</p>
 
-    <h3>12. Suspensión y baja</h3>
-    <p>Podemos suspender o cancelar tu acceso si incumples estos Términos. Tú puedes dejar de usar la app y <strong>solicitar la baja</strong> de tu cuenta cuando quieras escribiéndonos a <a href="mailto:1neoprocess@gmail.com">1neoprocess@gmail.com</a>.</p>
+      <h3>11. Donations (Sadaqah)</h3>
+      <p>The donations feature is <strong>not yet available</strong>. When it is activated, it will be governed by specific conditions shown at that time.</p>
 
-    <h3>13. Cambios en los Términos</h3>
-    <p>Podemos actualizar estos Términos. Publicaremos la versión vigente con su fecha; el uso continuado de la app tras un cambio implica su aceptación.</p>
+      <h3>12. Suspension and termination</h3>
+      <p>We may suspend or cancel your access if you breach these Terms. You may stop using the app and <strong>request deletion</strong> of your account at any time by writing to <strong>1neoprocess@gmail.com</strong>.</p>
 
-    <h3>14. Ley aplicable y jurisdicción</h3>
-    <p>Estos Términos se rigen por la <strong>ley española</strong>. Para cualquier controversia, y salvo que la normativa de consumo aplicable disponga otra cosa, las partes se someten a los <strong>juzgados y tribunales de Madrid, España</strong>.</p>
+      <h3>13. Changes to the Terms</h3>
+      <p>We may update these Terms. We will publish the current version with its date; continued use of the app after a change implies acceptance of it.</p>
 
-    <h3>15. Contacto</h3>
-    <p>Para cualquier cuestión sobre estos Términos: <a href="mailto:1neoprocess@gmail.com">1neoprocess@gmail.com</a>.</p>
-  </section>
+      <h3>14. Governing law and jurisdiction</h3>
+      <p>These Terms are governed by <strong>Spanish law</strong>. For any dispute, and unless applicable consumer legislation provides otherwise, the parties submit to the <strong>courts of Madrid, Spain</strong>.</p>
 
-  <footer>© 2026 Neoprocess · MasjidHub</footer>
+      <h3>15. Contact</h3>
+      <p>For any question about these Terms: <strong>1neoprocess@gmail.com</strong>.</p>
+    </section>
+  </div>
+
+  <!-- ══════════════════════════ ESPAÑOL ══════════════════════════ -->
+  <div data-doc="es" hidden>
+
+    <nav class="toc">
+      <a href="#privacy-es">Política de Privacidad</a>
+      <a href="#terms-es">Términos de Uso</a>
+      <a href="./borrar-cuenta.html">Borrar tu cuenta</a>
+      <a href="./child-safety.html">Seguridad infantil</a>
+    </nav>
+
+    <section class="doc" id="privacy-es">
+      <h2>Política de Privacidad de MasjidHub</h2>
+      <p class="updated"><strong>Última actualización:</strong> 8 de julio de 2026</p>
+
+      <p>En MasjidHub nos tomamos tu privacidad muy en serio. Esta política explica qué datos tratamos, para qué, con qué base legal y qué derechos tienes, conforme al Reglamento (UE) 2016/679 (<strong>RGPD</strong>) y a la Ley Orgánica 3/2018 (<strong>LOPDGDD</strong>).</p>
+
+      <div class="summary"><strong>En resumen:</strong> no vendemos tus datos, no mostramos publicidad y no usamos rastreadores ni analíticas. Solo tratamos lo mínimo para que la app funcione y para revisar las mezquitas que la comunidad aporta.</div>
+
+      <h3>1. Responsable del tratamiento</h3>
+      <ul>
+        <li><strong>Titular:</strong> Neoprocess</li>
+        <li><strong>Correo de contacto (privacidad):</strong> 1neoprocess@gmail.com</li>
+      </ul>
+      <p>Para cualquier asunto relacionado con tus datos, escríbenos a ese correo.</p>
+
+      <h3>2. Qué datos tratamos, con qué finalidad y base legal</h3>
+      <table>
+        <tr><th>Datos</th><th>Para qué</th><th>Base legal (RGPD)</th></tr>
+        <tr>
+          <td><strong>Nombre, correo electrónico y foto de perfil</strong> (los facilita tu cuenta de Google al iniciar sesión)</td>
+          <td>Crear tu perfil, permitirte aportar contenido y asociar tus aportaciones a tu cuenta</td>
+          <td>Ejecución del servicio que solicitas (art. 6.1.b) y tu consentimiento al iniciar sesión (art. 6.1.a)</td>
+        </tr>
+        <tr>
+          <td><strong>Aportaciones de mezquitas</strong> (nombre, dirección, ciudad, provincia, país, ubicación, instalaciones, horario de yumu'a, teléfono y web si los añades, foto y vídeo, y una nota opcional)</td>
+          <td>Publicar el directorio comunitario de mezquitas tras su revisión</td>
+          <td>Consentimiento (art. 6.1.a) e interés legítimo en ofrecer un servicio comunitario (art. 6.1.f)</td>
+        </tr>
+        <tr>
+          <td><strong>Correcciones/reportes</strong> (mezquita, campo, valor sugerido y motivo)</td>
+          <td>Mantener la información actualizada y correcta</td>
+          <td>Consentimiento e interés legítimo</td>
+        </tr>
+        <tr>
+          <td><strong>Ubicación aproximada (~2 km)</strong></td>
+          <td>Buscar mezquitas cercanas a ti</td>
+          <td>Consentimiento; <strong>no se almacena</strong>, solo se usa para la consulta</td>
+        </tr>
+        <tr>
+          <td><strong>Ubicación exacta</strong></td>
+          <td>(a) Calcular en tu dispositivo los horarios de oración y la dirección de la qibla; (b) situar en el mapa una mezquita que tú decides añadir</td>
+          <td>Consentimiento. En el caso (a) <strong>no sale de tu dispositivo</strong>; en el (b) la compartes deliberadamente al enviar la mezquita</td>
+        </tr>
+      </table>
+      <p><strong>No</strong> tratamos categorías especiales de datos. Aunque la app tiene una temática religiosa, <strong>no te pedimos ni registramos tu religión ni creencias</strong>: cualquiera puede usarla.</p>
+
+      <h3>3. Lo que NO hacemos</h3>
+      <ul>
+        <li><strong>No</strong> vendemos ni cedemos tus datos a terceros con fines comerciales.</li>
+        <li><strong>No</strong> mostramos publicidad.</li>
+        <li><strong>No</strong> usamos analíticas, cookies de seguimiento ni rastreadores de terceros.</li>
+        <li><strong>No</strong> registramos tokens de notificaciones: los recordatorios de oración son <strong>locales</strong>, en tu dispositivo.</li>
+        <li>Tus <strong>mezquitas favoritas</strong> se guardan <strong>solo en tu teléfono</strong>, no en nuestros servidores.</li>
+      </ul>
+
+      <h3>4. Con quién compartimos datos (encargados del tratamiento)</h3>
+      <p>Para prestar el servicio nos apoyamos en proveedores que actúan como encargados del tratamiento, con las garantías del art. 28 RGPD:</p>
+      <ul>
+        <li><strong>Supabase</strong> — alojamiento de la base de datos y del almacenamiento de fotos/vídeos. Servidores en la <strong>Unión Europea (Irlanda)</strong>.</li>
+        <li><strong>Google</strong> (Google Ireland Ltd. / Google LLC) — inicio de sesión con Google.</li>
+        <li><strong>Expo</strong> — infraestructura para distribuir y actualizar la aplicación.</li>
+      </ul>
+      <p>Algunos proveedores (p. ej. Google, Expo) pueden implicar <strong>transferencias internacionales</strong> fuera del EEE; en tal caso se amparan en las garantías adecuadas previstas por el RGPD (Cláusulas Contractuales Tipo o marcos equivalentes).</p>
+      <p>También podremos comunicar datos a <strong>autoridades</strong> cuando exista una obligación legal.</p>
+
+      <h3>5. Contenido público</h3>
+      <p>Cuando una mezquita que aportas es <strong>aprobada</strong> por nuestra moderación, su información (incluidas foto y vídeo) pasa a ser <strong>visible públicamente</strong> en la app. <strong>Tu nombre y tu correo NO se muestran públicamente</strong>: se usan solo internamente para la revisión y para contactarte si hiciera falta.</p>
+
+      <h3>6. Plazo de conservación</h3>
+      <ul>
+        <li><strong>Datos de tu cuenta:</strong> mientras tu cuenta esté activa. Si la eliminas (o nos lo pides), se borran; el borrado del usuario elimina en cascada tu perfil.</li>
+        <li><strong>Aportaciones aprobadas:</strong> pueden conservarse como parte del directorio comunitario. A petición tuya, podemos <strong>anonimizar</strong> los datos que te vinculen a ellas (nombre y correo del autor), manteniendo la ficha de la mezquita para la comunidad.</li>
+        <li><strong>Reportes:</strong> se conservan mientras sean útiles para la moderación.</li>
+      </ul>
+
+      <h3>7. Tus derechos</h3>
+      <p>Puedes ejercer en cualquier momento tus derechos de <strong>acceso, rectificación, supresión ("derecho al olvido"), oposición, limitación del tratamiento y portabilidad</strong>, así como <strong>retirar tu consentimiento</strong>. Para ello, escríbenos a <strong>1neoprocess@gmail.com</strong>; podremos pedirte que acredites tu identidad.</p>
+      <p>Si consideras que no hemos atendido correctamente tu solicitud, tienes derecho a <strong>reclamar ante la Agencia Española de Protección de Datos</strong> (AEPD, <a href="https://www.aepd.es">www.aepd.es</a>).</p>
+
+      <h3>8. Menores</h3>
+      <p>MasjidHub no está dirigida a menores de <strong>14 años</strong>. Al usar la app y aportar contenido, declaras tener al menos esa edad (o contar con el consentimiento de tus tutores conforme a la ley aplicable).</p>
+
+      <h3>9. Seguridad</h3>
+      <p>Aplicamos medidas técnicas y organizativas para proteger tus datos: cifrado en tránsito (HTTPS/TLS), políticas de seguridad a nivel de fila (RLS) que limitan el acceso a cada usuario a lo que le corresponde, subida de archivos restringida y revisión del contenido antes de su publicación. Ningún sistema es 100 % infalible, pero trabajamos para minimizar los riesgos.</p>
+
+      <h3>10. Cambios en esta política</h3>
+      <p>Podremos actualizar esta Política para reflejar cambios en la app o en la normativa. Publicaremos la versión vigente con su fecha de actualización y, si el cambio es relevante, te avisaremos por medios razonables.</p>
+
+      <h3>11. Contacto</h3>
+      <p>Para cualquier duda sobre esta Política o sobre el tratamiento de tus datos: <strong>1neoprocess@gmail.com</strong>.</p>
+    </section>
+
+    <section class="doc" id="terms-es">
+      <h2>Términos de Uso de MasjidHub</h2>
+      <p class="updated"><strong>Última actualización:</strong> 8 de julio de 2026</p>
+
+      <p>Bienvenido/a a <strong>MasjidHub</strong>. Al descargar, acceder o usar la aplicación aceptas estos Términos de Uso. Si no estás de acuerdo, por favor no uses la app.</p>
+
+      <h3>1. Quiénes somos</h3>
+      <p>MasjidHub es una aplicación titularidad de <strong>Neoprocess</strong> ("nosotros"). Contacto: <strong>1neoprocess@gmail.com</strong>.</p>
+
+      <h3>2. Qué es MasjidHub</h3>
+      <p>MasjidHub es un <strong>directorio comunitario de mezquitas</strong>: permite encontrar mezquitas cercanas y consultar información sobre ellas (instalaciones, horarios, etc.), calcular de forma orientativa los <strong>horarios de oración</strong> y la dirección de la <strong>qibla</strong>, y <strong>aportar</strong> nuevas mezquitas o correcciones. La información la construye la comunidad de personas usuarias.</p>
+
+      <h3>3. Tu cuenta</h3>
+      <ul>
+        <li>Para aportar contenido necesitas <strong>iniciar sesión con tu cuenta de Google</strong>.</li>
+        <li>Debes tener al menos <strong>14 años</strong> para usar la app y crear contenido.</li>
+        <li>Eres responsable de la actividad realizada desde tu cuenta. Mantén el acceso seguro.</li>
+      </ul>
+
+      <h3>4. Normas de uso</h3>
+      <p>Al usar MasjidHub te comprometes a <strong>no</strong>:</p>
+      <ul>
+        <li>Añadir mezquitas <strong>falsas, inexistentes o duplicadas</strong>, ni información que sepas incorrecta.</li>
+        <li>Subir fotos o vídeos que no hayas hecho tú o sobre los que no tengas derechos, o que muestren a personas sin su permiso.</li>
+        <li>Publicar contenido ofensivo, ilegal, difamatorio, que incite al odio o que vulnere derechos de terceros.</li>
+        <li>Usar la app para spam, fines comerciales no autorizados, o para dañar, sobrecargar o vulnerar la seguridad del servicio.</li>
+        <li>Suplantar a otras personas o entidades.</li>
+      </ul>
+      <p>Para prevenir mezquitas falsas, los envíos requieren estar <strong>físicamente en el lugar</strong> (ubicación GPS) y adjuntar <strong>foto y vídeo</strong> hechos con la cámara en el momento.</p>
+
+      <h3>5. Tu contenido y la licencia que nos concedes</h3>
+      <p>Sigues siendo el <strong>titular</strong> de las fotos, vídeos, textos y datos que aportas ("tu Contenido"). Ahora bien:</p>
+      <ul>
+        <li><strong>Garantizas</strong> que tienes los derechos necesarios sobre tu Contenido y que su publicación no infringe derechos de terceros ni la ley.</li>
+        <li>Al aportarlo, <strong>nos concedes una licencia mundial, no exclusiva, gratuita, transferible y sublicenciable</strong> para <strong>alojar, usar, reproducir, adaptar, mostrar, publicar y distribuir</strong> tu Contenido en la app y en la comunicación y promoción del servicio. Esta licencia existe para que podamos ofrecer y hacer crecer el directorio comunitario.</li>
+        <li>La licencia continúa respecto del Contenido ya publicado e integrado en el directorio aunque cierres tu cuenta, salvo que solicites su retirada y sea razonable atenderla.</li>
+      </ul>
+
+      <h3>6. Revisión y moderación</h3>
+      <p>Todo lo que aportas se <strong>revisa antes de publicarse</strong>. Podemos <strong>aprobar, rechazar, editar o eliminar</strong> cualquier contenido, a nuestro criterio y especialmente si incumple estas normas, sin que ello genere derecho a indemnización.</p>
+
+      <h3>7. Nuestra propiedad intelectual</h3>
+      <p>La aplicación MasjidHub —incluyendo su <strong>nombre, marca, logotipo, diseño, textos propios y código</strong>— es de nuestra titularidad o de nuestros licenciantes y está protegida por la ley. No puedes copiarla, modificarla, distribuirla ni crear obras derivadas sin nuestro permiso por escrito.</p>
+
+      <h3>8. Información orientativa (importante)</h3>
+      <ul>
+        <li>Los <strong>horarios de oración</strong> y la dirección de la <strong>qibla</strong> se <strong>calculan de forma aproximada</strong> a partir de tu ubicación y de métodos de cálculo estándar. Pueden variar respecto a los de tu mezquita o comunidad local. <strong>Verifica siempre con tu mezquita de referencia</strong>; no nos hacemos responsables de decisiones basadas únicamente en estos cálculos.</li>
+        <li>La información de las mezquitas la aporta la comunidad y <strong>puede contener errores, estar desactualizada o incompleta</strong>. Confírmala antes de desplazarte.</li>
+      </ul>
+
+      <h3>9. El servicio "tal cual"</h3>
+      <p>MasjidHub se ofrece <strong>"tal cual" y "según disponibilidad"</strong>, sin garantías de que esté libre de errores o interrupciones. Podemos modificar, suspender o discontinuar funciones en cualquier momento.</p>
+
+      <h3>10. Limitación de responsabilidad</h3>
+      <p>En la máxima medida permitida por la ley, no seremos responsables de daños indirectos o derivados del uso o la imposibilidad de uso de la app, de errores en la información comunitaria, ni del contenido aportado por otras personas usuarias. Nada en estos Términos excluye responsabilidades que no puedan excluirse legalmente (p. ej., por dolo).</p>
+
+      <h3>11. Donaciones (Sadaqah)</h3>
+      <p>La función de donaciones <strong>aún no está disponible</strong>. Cuando se active, se regirá por condiciones específicas que se mostrarán en ese momento.</p>
+
+      <h3>12. Suspensión y baja</h3>
+      <p>Podemos suspender o cancelar tu acceso si incumples estos Términos. Tú puedes dejar de usar la app y <strong>solicitar la baja</strong> de tu cuenta cuando quieras escribiéndonos a <strong>1neoprocess@gmail.com</strong>.</p>
+
+      <h3>13. Cambios en los Términos</h3>
+      <p>Podemos actualizar estos Términos. Publicaremos la versión vigente con su fecha; el uso continuado de la app tras un cambio implica su aceptación.</p>
+
+      <h3>14. Ley aplicable y jurisdicción</h3>
+      <p>Estos Términos se rigen por la <strong>ley española</strong>. Para cualquier controversia, y salvo que la normativa de consumo aplicable disponga otra cosa, las partes se someten a los <strong>juzgados y tribunales de Madrid, España</strong>.</p>
+
+      <h3>15. Contacto</h3>
+      <p>Para cualquier cuestión sobre estos Términos: <strong>1neoprocess@gmail.com</strong>.</p>
+    </section>
+  </div>
+
+  <footer class="bot">
+    MasjidHub · Neoprocess · 1neoprocess@gmail.com ·
+    <a href="./borrar-cuenta.html">Delete your account</a> ·
+    <a href="./child-safety.html">Child safety</a>
+  </footer>
 </div>
+
+<script>
+  (function () {
+    var buttons = document.querySelectorAll('.langswitch button');
+    var docs = document.querySelectorAll('[data-doc]');
+    function show(lang) {
+      docs.forEach(function (d) { d.hidden = d.getAttribute('data-doc') !== lang; });
+      buttons.forEach(function (b) {
+        b.setAttribute('aria-pressed', String(b.getAttribute('data-lang') === lang));
+      });
+      document.documentElement.lang = lang;
+      try { localStorage.setItem('masjidhub-legal-lang', lang); } catch (e) {}
+    }
+    buttons.forEach(function (b) {
+      b.addEventListener('click', function () { show(b.getAttribute('data-lang')); });
+    });
+    // English is the default. We only switch if the visitor chose Spanish before.
+    var saved = null;
+    try { saved = localStorage.getItem('masjidhub-legal-lang'); } catch (e) {}
+    if (saved === 'es') show('es');
+  })();
+</script>
 </body>
 </html>
